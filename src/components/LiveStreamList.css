@@ -1,0 +1,75 @@
+/* 全体のスタイル */
+.live-stream-list {
+  padding: 20px;
+  background-color: #fce4ec; /* 背景色をピンクにして可愛らしく */
+}
+
+/* ローディング、エラー、ノーストリームメッセージのスタイル */
+.loading,
+.error,
+.no-streams {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* 可愛らしいフォント */
+}
+
+/* ストリームコンテナのスタイル */
+.streams-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* 各ストリームアイテムのスタイル */
+.live-stream-item {
+  border: 1px solid #f8bbd0; /* 薄いピンクのボーダー */
+  border-radius: 15px; /* 角を丸く */
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション */
+}
+
+/* サムネイルのスタイル */
+.stream-thumbnail {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s; /* ホバー時のアニメーション */
+}
+
+/* ホバー時のエフェクト */
+.live-stream-item:hover {
+  transform: scale(1.05); /* 拡大効果 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.live-stream-item:hover .stream-thumbnail {
+  transform: scale(1.1); /* サムネイルを少し拡大 */
+}
+
+/* ストリーム情報のスタイル */
+.stream-info {
+  padding: 10px;
+  background: #fff; /* 白い背景 */
+  border-top: 1px solid #f8bbd0;
+}
+
+.stream-title {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #ec407a; /* ピンク色のタイトル */
+  font-family: 'Poppins', sans-serif; /* 可愛らしいフォント */
+}
+
+.stream-viewers {
+  color: #d81b60; /* 少し濃いピンク */
+}
+
+/* リンクのスタイル */
+.stream-link {
+  text-decoration: none;
+  color: inherit;
+}

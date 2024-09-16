@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import LiveStreamList from './components/LiveStreamList';
+import OpeningAnimation from './components/OpeningAnimation';
+import ClickEffect from './components/ClickEffect';
+import Header from './components/Header';
+import Register from './components/Register';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [isAnimationEnd, setIsAnimationEnd] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <ClickEffect />
+        {!isAnimationEnd && (
+          <OpeningAnimation onAnimationEnd={() => setIsAnimationEnd(true)} />
+        )}
+        {isAnimationEnd && (
+          <>
+            <Routes>
+              <Route path="/" element={<LiveStreamList />} />
+              <Route path="/register" element={<Register />} />
+            </Routes>
+            <RegisterButton />
+          </>
+        )}
+      </div>
+    </Router>
   );
-}
+};
+
+const RegisterButton = () => {
+  const navigate = useNavigate();
+
+  return (
+    <button
+      className="register-button"
+      onClick={() => navigate('/register')}
+    >
+      登録
+    </button>
+  );
+};
 
 export default App;

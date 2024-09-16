@@ -1,0 +1,35 @@
+/* Headerのスタイル */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* パディングを調整 */
+  background-color: #f5f5f5; /* 背景色をライトグレーにして中立的 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽いシャドウでシンプルに */
+  border-bottom: 2px solid #ddd; /* 下にライトグレーのボーダー */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px; /* フォントサイズを調整 */
+  color: #333; /* ダークグレーの文字色 */
+  font-family: 'Poppins', sans-serif; /* 可愛らしいフォント */
+}
+
+/* 登録ボタンのスタイル */
+.register-button {
+  font-size: 14px; /* フォントサイズを調整 */
+  padding: 8px 16px; /* ボタンのパディングを調整 */
+  background-color: #007bff; /* ボタンの背景色をブルーに */
+  color: white;
+  border: none;
+  border-radius: 5px; /* ボタンの角を丸く */
+  cursor: pointer; /* カーソルをポインタに */
+  transition: background-color 0.3s, transform 0.3s; /* アニメーション効果 */
+  font-family: 'Poppins', sans-serif; /* 可愛らしいフォント */
+}
+
+.register-button:hover {
+  background-color: #0056b3; /* ホバー時の背景色を濃いブルーに */
+  transform: scale(1.05); /* ホバー時に少し拡大 */
+}

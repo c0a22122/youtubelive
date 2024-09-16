@@ -1,0 +1,52 @@
+.opening-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f9f9f9; /* 背景色 */
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* かわいいフォント */
+  font-size: 4rem; /* フォントサイズ */
+  color: #ff69b4; /* テキストの色 */
+  animation: bounce 2s infinite; /* バウンスアニメーション */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* テキストの影 */
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem; /* アイコンのサイズ */
+  color: #ff6347; /* アイコンの色 */
+  animation: rotate 10s linear infinite; /* 回転アニメーション */
+}
