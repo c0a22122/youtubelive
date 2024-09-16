@@ -9,11 +9,26 @@
   border-bottom: 2px solid #ddd; /* 下にライトグレーのボーダー */
 }
 
+.header-title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.01s, transform 0.01s;
+}
+
 .header h1 {
   margin: 0;
   font-size: 24px; /* フォントサイズを調整 */
   color: #333; /* ダークグレーの文字色 */
   font-family: 'Poppins', sans-serif; /* 可愛らしいフォント */
+  transition: color 0.01s, transform 0.01s; /* スムーズなトランジション */
+}
+
+/* ホバー時のスタイル */
+.header h1:hover {
+  color: #903dc4; /* ホバー時の文字色を紫色に変更 */
+  transform: translateY(-2px); /* ホバー時に少し上に移動 */
 }
 
 /* 登録ボタンのスタイル */

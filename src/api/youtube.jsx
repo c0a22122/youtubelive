@@ -1,5 +1,12 @@
 const API_KEY = 'AIzaSyBBj66BZXSzqj4-yZs24P58erAP0KQr24w'; // YouTube APIキーを入力してください
-const CHANNELS = ['UCgIfLpQvelloDi8I0Ycbwpg', 'UC4YaOt1yT-ZeyB0OmxHgolA'];
+const CHANNELS = [
+  'UCmZ1Rbthn-6Jm_qOGjYsh5A',
+  'UCzUNASdzI4PV5SlqtYwAkKQ',
+  'UCIjdfjcSaEgdjwbgjxC3ZWg',
+  'UCuDY3ibSP2MFRgf7eo3cojg',
+  'UCnvVG9RbOW3J6Ifqo-zKLiw',
+  'UCgmFrRcyH7d1zR9sIVQhFow',
+];
 
 const CACHE_KEY = 'liveStreamsCache';
 const CACHE_EXPIRY_MS = 60 * 60 * 1000; // 1時間（ミリ秒）

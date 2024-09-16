@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from 'react-router-dom';
 import LiveStreamList from './components/LiveStreamList';
 import OpeningAnimation from './components/OpeningAnimation';
 import ClickEffect from './components/ClickEffect';
@@ -13,7 +18,8 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Header />
+        {/* オープニングアニメーションが終了するまでHeaderは非表示 */}
+        {!isAnimationEnd ? null : <Header />}
         <ClickEffect />
         {!isAnimationEnd && (
           <OpeningAnimation onAnimationEnd={() => setIsAnimationEnd(true)} />
@@ -36,10 +42,7 @@ const RegisterButton = () => {
   const navigate = useNavigate();
 
   return (
-    <button
-      className="register-button"
-      onClick={() => navigate('/register')}
-    >
+    <button className="register-button" onClick={() => navigate('/register')}>
       登録
     </button>
   );
